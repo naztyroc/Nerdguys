@@ -9,6 +9,9 @@ For use of deploying nodeJS Stack via docker on linux.
 - app - nodejs application stack [ubunt 14.04 / nodejs 6.9.4]
 - mongodb # database backend [ubuntu 14.04 / mongodb 3.2.2]
 
+## Update docker-compose.yaml mongodb root username and password
+
+
 
 ## Deploy Instructions
 
@@ -23,16 +26,12 @@ git clone https://github.com/naztyroc/Nerdguys.git
 
 cd Nerdguys/nodejs_mongo_stack
 
-```
-
-## Update docker-compose.yaml mongodb root username and password
-
-```console
 docker-compose build --pull
 
 docker-compose up -d
 
 docker ps -a
+
 ```
 
 ## Validate instance is running
