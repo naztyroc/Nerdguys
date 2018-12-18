@@ -5,7 +5,7 @@ For use of deploying nodeJS Stack via docker on linux.
 
 ## Components
 
-- web - nginx proxy [ubuntu 14.04 / nginx ]
+- web - nginx proxy [ubuntu 14.04 / nginx 1.4.6]
 - app - nodejs application stack [ubunt 14.04 / nodejs 6.9.4]
 - mongodb # database backend [ubuntu 14.04 / mongodb 3.2.2]
 
