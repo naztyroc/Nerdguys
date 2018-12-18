@@ -17,6 +17,8 @@ For use of deploying nodeJS Stack via docker on linux.
 ADD 'test.local' to /etc/hosts (nodejs test hostname)
 sudo echo "127.0.0.1 test.local" >> /etc/hosts
 
+cd ~/
+
 git clone https://github.com/naztyroc/Nerdguys.git
 
 cd Nerdguys/nodejs_mongo_stack
