@@ -18,7 +18,7 @@ For use of deploying nodeJS Stack via docker on linux.
 ```console
 
 ADD 'test.local' to /etc/hosts (nodejs test hostname)
-sudo echo "127.0.0.1 test.local" >> /etc/hosts
+sudo echo '127.0.0.1 test.local' | sudo tee -a /etc/hosts
 
 cd ~/
 
