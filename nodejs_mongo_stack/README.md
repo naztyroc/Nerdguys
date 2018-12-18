@@ -16,7 +16,7 @@ MONGO_INITDB_ROOT_PASSWORD:
 ## Update folder paths for db_data, nodejs, and nginx_conf
 
 ex.
-device: User/<username>/Nerdguys/nodejs_mongo_stack/db_data
+device: /User/<username>/Nerdguys/nodejs_mongo_stack/db_data
 
 
 ## Deploy Instructions
