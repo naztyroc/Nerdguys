@@ -29,17 +29,17 @@ volumes:
   db_data:
     driver_opts:
       type: none
-      device: ~/Nerdguys/nodejs_mongo_stack
+      device: /Users/r.burns/Nerdguys/nodejs_mongo_stack/db_data
       o: bind
 
   nodejs:
     driver_opts:
       type: none
-      device: ~/Nerdguys/nodejs_mongo_stack
+      device: /Users/r.burns/Nerdguys/nodejs_mongo_stack/www_data
       o: bind
 
   nginx_conf:
     driver_opts:
       type: none
-      device: ~/Nerdguys/nodejs_mongo_stack
+      device: /Users/r.burns/Nerdguys/nodejs_mongo_stack/www_config
       o: bind

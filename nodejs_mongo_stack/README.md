@@ -16,7 +16,7 @@ MONGO_INITDB_ROOT_PASSWORD:
 ## Update docker-compose.yaml folder paths for db_data, nodejs, and nginx_conf
 
 ex.
-device: /User/<username>/Nerdguys/nodejs_mongo_stack/db_data
+device: /Users/<username>/Nerdguys/nodejs_mongo_stack/db_data
 
 
 ## Deploy Instructions
@@ -43,9 +43,9 @@ docker ps -a
 ## Validate instance is running
 
 ```console
-curl -I http://localhost:8888
 
-HTTP/1.1 302 Found
-Server: nginx/1.13.12
+curl http://test.local:8888
+Hello World!
+
 ...
 ```
