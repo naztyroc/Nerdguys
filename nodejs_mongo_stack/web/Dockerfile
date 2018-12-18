@@ -2,11 +2,21 @@ FROM ubuntu:14.04
 
 MAINTAINER Rashian Burns <rashian@wan-scape.com>
 
-RUN apt-get update && apt-get install -y curl python gcc g++ build-essential nginx
-RUN curl -sLO https://deb.nodesource.com/node_6.x/pool/main/n/nodejs/nodejs_6.9.4-1nodesource1~trusty1_amd64.deb && dpkg -i nodejs_6.9.4-1nodesource1~trusty1_amd64.deb
+RUN apt-get update && apt-get install -y curl nginx npm build-essential libssl-dev
+RUN curl https://raw.githubusercontent.com/creationix/nvm/master/install.sh | bash
+ENV NVM_DIR /root/.nvm
+ENV NODE_VERSION 6.9.3
+RUN . $NVM_DIR/nvm.sh \
+    && nvm install $NODE_VERSION \
+    && nvm ls-remote
+RUN npm config set strict-ssl false\
+    && npm i mongodb --save \
+    && npm i express --save
 
 COPY nodejs.conf /etc/nginx/conf.d/nodejs.conf
 
 EXPOSE 80 3000 8888
+
+CMD sleep 10000
 
 CMD nginx && node /home/node/app/app.js
