@@ -7,8 +7,6 @@ RUN apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv EA312927 && \
     apt-get update && \
     apt-get install -y mongodb-org=3.2.2 mongodb-org-server=3.2.2 mongodb-org-shell=3.2.2 mongodb-org-mongos=3.2.2 mongodb-org-tools=3.2.2
 
-VOLUME /data/db
-
 EXPOSE 27017
 
 CMD mongod

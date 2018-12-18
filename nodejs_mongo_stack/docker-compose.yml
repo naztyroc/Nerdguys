@@ -29,17 +29,17 @@ volumes:
   db_data:
     driver_opts:
       type: none
-      device: /Users/r.burns/git_pub/Nerdguys/db_data
+      device: ./db_data
       o: bind
 
   nodejs:
     driver_opts:
       type: none
-      device: /Users/r.burns/git_pub/Nerdguys/www_data
+      device: ./www_data
       o: bind
 
   nginx_conf:
     driver_opts:
       type: none
-      device: /Users/r.burns/git_pub/Nerdguys/www_config
+      device: ./www_config
       o: bind
