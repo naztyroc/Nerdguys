@@ -13,7 +13,7 @@ For use of deploying nodeJS Stack via docker on linux.
 MONGO_INITDB_ROOT_USERNAME:
 MONGO_INITDB_ROOT_PASSWORD:
 
-## Update folder paths for db_data, nodejs, and nginx_conf
+## Update docker-compose.yaml folder paths for db_data, nodejs, and nginx_conf
 
 ex.
 device: /User/<username>/Nerdguys/nodejs_mongo_stack/db_data
