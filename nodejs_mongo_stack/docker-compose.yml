@@ -1,0 +1,45 @@
+version: '3.1'
+
+## Mongo DB Service
+services:
+  db:
+    build: ./db
+    restart: always
+    volumes:
+      - db_data:/data/db
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: example
+
+  web:
+    build: ./web
+    restart: always
+    volumes:
+      - nginx_conf:/etc/nginx/conf.d
+      - nodejs:/home/node/app
+    environment:
+      - DB_HOST=db
+    ports:
+      - 127.0.0.1:8888:80
+    depends_on:
+      - db
+
+## Nextcloud Volume Section
+volumes:
+  db_data:
+    driver_opts:
+      type: none
+      device: /Users/r.burns/git_pub/Nerdguys/db_data
+      o: bind
+
+  nodejs:
+    driver_opts:
+      type: none
+      device: /Users/r.burns/git_pub/Nerdguys/www_data
+      o: bind
+
+  nginx_conf:
+    driver_opts:
+      type: none
+      device: /Users/r.burns/git_pub/Nerdguys/www_config
+      o: bind
