@@ -10,7 +10,13 @@ For use of deploying nodeJS Stack via docker on linux.
 - mongodb # database backend [ubuntu 14.04 / mongodb 3.2.2]
 
 ## Update docker-compose.yaml mongodb root username and password
+MONGO_INITDB_ROOT_USERNAME:
+MONGO_INITDB_ROOT_PASSWORD:
 
+## Update folder paths for db_data, nodejs, and nginx_conf
+
+ex.
+device: User/<username>/Nerdguys/nodejs_mongo_stack/db_data
 
 
 ## Deploy Instructions
