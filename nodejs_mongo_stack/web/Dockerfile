@@ -19,10 +19,6 @@ COPY startup.sh /bin/startup.sh
 
 RUN chmod 755 /bin/startup.sh
 
-<<<<<<< HEAD
 EXPOSE 80 3000
 
 ENTRYPOINT [ "bash", "-c", "/bin/startup.sh"]
-=======
-CMD nginx && node /home/node/app/app.js
->>>>>>> 3fbe90b20eaa3053d28579d7267ff83923b6af69
