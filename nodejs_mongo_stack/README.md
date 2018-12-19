@@ -23,7 +23,7 @@ device: /Users/<username>/Nerdguys/nodejs_mongo_stack/db_data
 
 ```console
 
-ADD 'test.local' to /etc/hosts (nodejs test hostname)
+## ADD 'test.local' to /etc/hosts (nodejs test hostname)
 sudo echo '127.0.0.1 test.local' | sudo tee -a /etc/hosts
 
 cd ~/
