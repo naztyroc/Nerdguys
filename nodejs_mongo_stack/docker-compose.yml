@@ -16,7 +16,7 @@ services:
     restart: always
     volumes:
       - nginx_conf:/etc/nginx/conf.d
-      - nodejs:/home/node/app
+      - nodejs:/var/www/html
     environment:
       - DB_HOST=db
     ports:
