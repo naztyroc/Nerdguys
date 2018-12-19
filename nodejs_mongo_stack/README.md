@@ -44,6 +44,10 @@ docker ps -a
 
 ```console
 
+docker logs `docker ps -a | grep web | awk '{print $1}'`
+Example app listening on port 3000!
+MongoDB connection successful
+
 curl http://test.local:8888
 Hello World!
 
